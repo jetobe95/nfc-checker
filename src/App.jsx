@@ -1,7 +1,7 @@
 import NfcReader from "./NfcReader";
 
 function App() {
-  const hasNFC = "NDEFReader" in window;
+  const hasNFC = ("NDEFReader" in window);
   return (
     <div
       style={{
@@ -10,6 +10,7 @@ function App() {
         minHeight: "100vh",
         fontFamily: "system-ui",
         display: "flex",
+        flexDirection:'column',
         alignItems: "center",
         justifyContent: "center",
       }}
@@ -22,6 +23,7 @@ function App() {
       {hasNFC ? (
         <>
           <h1 style={{ color: "white" }}>TIENE NFC ✅</h1>
+          <br />
           <NfcReader />
         </>
       ) : (
