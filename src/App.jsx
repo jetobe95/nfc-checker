@@ -1,5 +1,3 @@
-import { useEffect } from "react"
-
 function App() {
   const hasNFC = ('NDEFReader' in window)
   return (
